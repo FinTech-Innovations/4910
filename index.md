@@ -85,7 +85,7 @@ If you have a documented disability and anticipate needing accommodations in thi
   + Traditional financial systems and inefficiencies
   + How does FinTech improve the financial system?
   
-* Weeks 2-4: **Pay Tech ** (RN)
+* Weeks 2-4: **Pay Tech** (RN)
   + Digital wallets (Paypal)
   + Payment ecosystems (AliPay)
   + Social media-based payment platforms (Facebook, WeChat)
