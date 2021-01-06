@@ -94,7 +94,7 @@ If you have a documented disability and anticipate needing accommodations in thi
 
 * Weeks 5-7: **Blockchain and Cryptocurrencies** (RV)
   + Centralized vs decentralized intermediation. Advantages of decentralized intermediation.
-  + Introduction to blockchain technologies: Bitcoin and Ethereum
+  + Introduction to blockchain technologies
   + Cryptocurrencies as an asset class in investing
 
 * Weeks 8-10: **Credit Tech** (DR)
