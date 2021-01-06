@@ -93,7 +93,7 @@ If you have a documented disability and anticipate needing accommodations in thi
   + Security innovations (Apple Pay and Google Wallet)
 
 * Weeks 5-7: **Blockchain and Cryptocurrencies** (RV)
-  + Centralized vs decentralized intermediation. Advantages of decentralized intermediation.
+  + Centralized vs decentralized intermediation
   + Introduction to blockchain technologies
   + Cryptocurrencies as an asset class in investing
 
