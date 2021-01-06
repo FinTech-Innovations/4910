@@ -9,6 +9,6 @@ This course is scheduled for **Spring 2021**.  Check back later for more informa
 Potential topics include:
 * Lorem ipsum dsdfsdfolor sit amet, consectetuer adipiscing elit test.
 * Aliquam tincidunt mauris eu risus.
-* Vestibulum auctor dapibus neque.s
+* Vestibulum ausdfctor dapibus neque.s
 * Nunc dignissim risus id metus.
 * Cras ornare tristiquse elit.
