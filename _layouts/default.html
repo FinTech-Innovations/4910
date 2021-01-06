@@ -12,8 +12,8 @@
     <![endif]-->
   </head>
   <body style="margin:0px">
-    <div class="wrapper" style="overflow:auto">
-      <header style="background:#d9dcde; color:#000000; height:100vh; padding-top:50px;">
+    <div class="wrapper">
+      <header style="background:#d9dcde;color:#000000;height:100vh;padding-top:50px;overflow: auto;">
         <h1 style="text-align:center;"><a href="{{ "/" | absolute_url }}" style="color:#000000;">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         {% if site.logo %}
@@ -69,12 +69,7 @@
       {{ content }}
 
       </section>
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
     </div>
     <script src="{{ "../lsu-fintech.github.io/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
