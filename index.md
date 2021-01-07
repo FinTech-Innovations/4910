@@ -4,7 +4,7 @@ layout: default
 
 #### **When:** Mon 6-9 PM. Office Hours by Appointment
 #### **Where:** Remote! A link will be sent to you.
-#### **Web:**
+#### **Web:** [https://lsu-fintech.github.io/4910/](https://lsu-fintech.github.io/4910/)
 
 #### **Professors:**
 
@@ -23,8 +23,7 @@ The financial industry is changing rapidly in the face of new technology.  In th
 This special topics course is intended to introduce you to a broad set of financial technologies and approaches referred to as **FinTech** to perform such financial intermediation functions. This course is primarily intended for business majors, especially Finance majors or graduate students interested or specializing in finance. The goal is to provide a fundamental understanding of the forces that impel such innovations and showcase the technological approaches and business models through use cases.  We hope to familiarize you sufficiently with the technology that you can utilize and adapt the technologies in your careers. 
 
  
-The course will study:
-
+<!-- The course will study:
   - How is financial innovation different than industrial innovation? How is financial innovation evolving? What are the light sides and dark sides of financial innovation?
   - Will traditional financial intermediaries be able to adapt? Or will upstart FinTechs disrupt them, re-imagining business models just as Amazon reshaped book-selling and Uber transformed taxi-rides?
   - What are the critical technology strategies and foundational technologies in FinTech?
@@ -32,7 +31,7 @@ The course will study:
   - What are the primary FinTech data science methods and tools? How do they apply to real FinTech problems and questions today?
   - How is FinTech reconfiguring financial services business models? What are the key disruption points? What determines success in FinTech?
   - Where are the limits, risks, and broader policy and social implications of FinTech?
-
+-->
 
 ## Prerequisites
 There are no prerequisites for this course besides a curious mind and a strong work ethic.  Prior exposure to data science or analytics courses such as FIN 4820 is useful, but not necessary.  
@@ -44,22 +43,23 @@ There are no prerequisites for this course besides a curious mind and a strong w
 The class will be team-taught through a mixture of lectures and readings and discussion. There will be periodic speakers from the industry as well.  Students will be expected to work individually and in teams on projects and make presentations. All of these elements are intended to elicit reflection, discussion and creativity.  
 
 #### Textbook and lectures
-There's no set textbook for this course. The lecture notes are pretty detailed and are thus *self-contained*. Each lecture will come with a set of readings, which you are expected to have read before class.  Lectures and links to readings will be posted on the [course website](https://github.com/Foundations-of-Fintech-Master).
+There's no set textbook for this course. The lecture notes are pretty detailed and are thus *self-contained*. Each lecture will come with a set of readings, which you are expected to have read before class.  Lectures and links to readings will be posted on the [course website](https://lsu-fintech.github.io/4910/).
 
+<!--
 #### Github classroom
 The class will be taught using [GitHub Classroom](//classroom.github.com/). You will receive an email invitation to the course repo with instructions in due time, but suffice it to say that this is how we'll submit assignments, provide feedback, receive grades, etc.
+-->
 
 #### R and RStudio
 
-All projects will use the statistical programming language **R** (download [here](https://www.r-project.org/). 
-Please make sure that you install the **RStudio IDE** too (download [here](https://www.rstudio.com/products/rstudio/download/preview/).  Both are open-source and/or free. 
-Instructions will be provided when we get to the relevant lecture.  If you are curious and want to get a head start, I can think of no finer guide than Jenny Bryan et al.'s http://happygitwithr.com/ (see esp. sections 4 -- 15).
+All projects will use the statistical programming language **R** (download [here](https://www.r-project.org/). You will receive an invite via email to join the class home page in the RStudio Cloud. You will use [RStudio Cloud](https://rstudio.cloud/) to run all in class programs and submit programming homework assignments. You can also install **R** and the **RStudio IDE** on your computer (download [here](https://www.rstudio.com/products/rstudio/download/preview/).  Both are open-source and/or free. Instructions will be provided when we get to the relevant lecture.  If you are curious and want to get a head start, I can think of no finer guide than Jenny Bryan et al.'s http://happygitwithr.com/ (see esp. sections 4 -- 15).
 
 #### Evaluation and Grading:
 
 *	10% from participation throughout the course
 *	30% from case studies and reports in weeks 1-4, and 14
-*	60% from project in weeks 5-13
+*	30% from mini-project in weeks 5-13
+*	30% from the main project
 
 The the LSU [Grading System and Grading Scale](https://catalog.lsu.edu/content.php?catoid=21&navoid=1932#Grading_Systems) will be used to assign letter grades.
 
@@ -85,33 +85,43 @@ If you have a documented disability and anticipate needing accommodations in thi
   + Traditional financial systems and inefficiencies
   + How does FinTech improve the financial system?
   
-* Weeks 2-4: **Pay Tech** (RN)
+* Weeks 2-3: **Pay Tech** (RN)
   + Digital wallets (Paypal)
   + Payment ecosystems (AliPay)
   + Social media-based payment platforms (Facebook, WeChat)
   + Payment gateways (Square, Stripe)
   + Security innovations (Apple Pay and Google Wallet)
+  + <i>Case studies and presentations</i>
 
-* Weeks 5-7: **Blockchain and Cryptocurrencies** (RV)
+* Weeks 4-6: **Blockchain and Cryptocurrencies** (RV)
   + Centralized vs decentralized intermediation
   + Introduction to blockchain technologies
   + Cryptocurrencies as an asset class in investing
+  + <i>Project</i>
 
-* Weeks 8-10: **Credit Tech** (DR)
+* Weeks 7-8: **Introduction to R** (DR)
+  + Basics of R programming
+  + Building a minimal blockchain in R
+  + <i>Mini project</i>
+
+* Weeks 9-11: **Credit Tech** (DR)
   + Credit analysis
   + Peer-to-peer lending
-  + Peer-to-peer personal lending – LendingClub and Prosper
-  + Startup and business funding: Kickstarter, Indiegogo, ICOs
   + Crowdfunding models
+  + <i>Main project</i>
 
-* Weeks 11-13: **Invest Tech** (DR)
-  + Portfolio management: Portfolio management: a recap
+* Weeks 12-13: **Invest Tech** (DR)
+  + Portfolio management: a recap
   + Robo-advising, e.g: Vanguard’s Personal Advisor Services
   + Stock screening and selection
   + Algorithmic trading
+  + <i>Mini project</i>
 
 * Week 14: **Prospects and Challenges** (RN)
   + Financial Inclusion
   + Regulations
   + Privacy, Encryption, and Information Security
+  + <i>In-class presentations</i>
+
+* Week 15: **Project Presentations**
   
