@@ -3,7 +3,7 @@ layout: default
 ---
 
 #### **When:** Mon 6-9 PM. Office Hours by Appointment
-#### **Where:** Remote! A link will be sent to you.
+#### **Where:** Remote! [https://lsu.zoom.us/j/97203794084?pwd=UjZjL3EzczA2T2ZzV2FqNUhZS01PUT09](https://lsu.zoom.us/j/97203794084?pwd=UjZjL3EzczA2T2ZzV2FqNUhZS01PUT09)
 #### **Web:** [https://lsu-fintech.github.io/4910/](https://lsu-fintech.github.io/4910/)
 
 #### **Professors:**
@@ -15,6 +15,9 @@ layout: default
 #### **Teaching Fellow:** 
   - Sarp Mertdogan (smertd1@lsu.edu)
 
+
+#### Communication
+Discord will be used as the main communication tool. You will receive an invitation to join the Discord Server for the course.
 
 ## Course Description
 
@@ -57,7 +60,7 @@ All projects will use the statistical programming language **R** (download [here
 #### Evaluation and Grading:
 
 *	10% from participation throughout the course
-*	30% from case studies and reports in weeks 1-4, and 14
+*	30% from case studies and reports in weeks 1-3, and 14
 *	30% from mini-project in weeks 5-13
 *	30% from the main project
 
