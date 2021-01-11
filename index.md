@@ -3,7 +3,7 @@ layout: default
 ---
 
 #### **When:** Mon 6-9 PM. Office Hours by Appointment
-#### **Where:** Remote! [https://lsu.zoom.us/j/97203794084?pwd=UjZjL3EzczA2T2ZzV2FqNUhZS01PUT09](https://lsu.zoom.us/j/97203794084?pwd=UjZjL3EzczA2T2ZzV2FqNUhZS01PUT09)
+#### **Where:** Remote! [zoom link](https://lsu.zoom.us/j/97203794084?pwd=UjZjL3EzczA2T2ZzV2FqNUhZS01PUT09)
 #### **Web:** [https://lsu-fintech.github.io/4910/](https://lsu-fintech.github.io/4910/)
 
 #### **Professors:**
@@ -17,7 +17,7 @@ layout: default
 
 
 #### Communication
-Discord will be used as the main communication tool. You will receive an invitation to join the Discord Server for the course.
+**Discord** will be used as the main communication tool. Click here [FIN4910 Discord](https://discord.gg/ezF2FBxm38) 
 
 ## Course Description
 
