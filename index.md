@@ -6,6 +6,8 @@ layout: default
 #### **Where:** Remote! [zoom link](https://lsu.zoom.us/j/97203794084?pwd=UjZjL3EzczA2T2ZzV2FqNUhZS01PUT09)
 #### **Web:** [https://lsu-fintech.github.io/4910/](https://lsu-fintech.github.io/4910/)
 
+#### **Communication:** Create a **Discord** account using your **LSU email** here: [FIN4910 Discord](https://discord.gg/ezF2FBxm38) 
+
 #### **Professors:**
 
   - [Rajesh Narayanan](https://www.lsu.edu/business/finance/profile-viewer.php?un=rnarayan) (rnarayan@lsu.edu)
@@ -15,9 +17,6 @@ layout: default
 #### **Teaching Fellow:** 
   - Sarp Mertdogan (smertd1@lsu.edu)
 
-
-#### Communication
-**Discord** will be used as the main communication tool. Click here [FIN4910 Discord](https://discord.gg/ezF2FBxm38) 
 
 ## Course Description
 
