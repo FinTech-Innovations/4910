@@ -1,11 +1,11 @@
 # Assignment 01
 
 
-Listen: [Money talks: The fintech edge](https://www.stitcher.com/s?eid=46504704&refid=asa)
+Listen: [Money talks: The FinTech edge](https://www.stitcher.com/s?eid=46504704&refid=asa)
 
 Watch: [How FinTech is Shaping the Future of Banking](https://www.youtube.com/watch?v=pPkNtN8G7q8)
 
-Read: [this](#)
+Read: [Silicon Valley Tried to Upend Banks. Now It Works With Them](https://www.nytimes.com/2017/02/22/business/dealbook/silicon-valley-tried-to-upend-banks-now-it-works-with-them.html)
 
 
 Think and answer (be prepared to discuss next class):
