@@ -1,0 +1,437 @@
+---
+title: "Lecture 1"
+subtitle: "The Promise of FinTech"
+author: "Rajesh Narayanan"
+institute: "Department of Finance, LSU"
+date: "2021/01/11 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+   
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+opts_chunk$set(
+  fig.align="center",  
+  fig.height=4, #fig.width=6,
+  # out.width="748px", #out.length="520.75px",
+  dpi=300, #fig.path='Figs/',
+  cache=T#, echo=F, warning=F, message=F
+  )
+library(tidyverse)
+library(hrbrthemes)
+library(fontawesome)
+library(tufte)
+```
+
+# Table of contents
+
+1. [Prologue](#prologue)
+
+2. [FinTech](#FinTech)
+
+3. [Course Overview](#Course Overview)
+
+4. [Course Highlights](#Highlights)
+
+
+---
+
+class:  inverse, center, middle
+name: prologue
+
+# Prologue
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+---
+
+# Introductions
+
+--
+
+`r fa('globe')` https://lsu-fintech.github.io/4910
+
+--
+
+### **Us**
+#### Professors:
+
+`r fa('address-book')` Rajesh Narayanan, Dimuthu Ratnadiwakara, Raja Velu
+
+#### Teaching Fellow: 
+
+`r fa('address-book')` Sarp Mertdogan 
+
+--
+
+### **You**
+
+A quick roundtable of names, majors, background, interest in the course.
+
+---
+
+
+class:  inverse, center, middle
+name: FinTech
+
+# FinTech
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+---
+
+class: center, middle
+
+# So, What is Fintech?
+
+--
+
+### Many answers....all probably correct in some aspect
+
+---
+
+# Fin + Tech
+
+--
+
+## As a buzzword, its new!
+
+--
+
+### ... but Finance and Technology are not new!
+
+---
+
+# A walk down history
+
+ - ### Money in a barter economy
+ 
+--
+
+ - ### Checks in a paper money economy
+ 
+--
+
+ - ### ATM machines, online banking and trading, wire transfers....
+ 
+--
+
+> ## Financial services industry has **always** been at the forefront of technological innovation, and it has been constantly **disrupted** by new technology
+
+---
+
+# So, what's new this time around?
+
+--
+
+## Historical trailblazers
+- ### central banks and financial institutions
+
+--
+
+## Current trailblazers
+- ### Tech companies
+
+--
+
+> ## Google, Amazon, Facebook taking on **finance functions** like **payments, lending and investment**
+  
+---
+
+# Why Tech firms?
+
+--
+
+ - ### Big data boom and unparalleled access to consumer data
+ 
+--
+
+ - ### Not subject to regulations like financial institutions
+
+--
+
+> ### Aggressive in taking risks: **new products, technology and markets**
+
+---
+
+# Fintech Industry Equilibrium
+
+--
+
+## Traditional banks?
+
+--
+
+ - ### In danger of being technologically leapfrogged!
+ 
+--
+
+> ## New industry equilibrium?
+> ### **Banks becoming tech firms** - Acquiring new talent and companies
+> ### **Tech firms becoming banks** - Acquiring bank charters
+
+---
+
+# FinTech dynamics
+
+--
+
+## Traditional banking services:
+
+--
+
+  - ### Payment services - deposit accounts
+
+--
+  - ### Lending services - personal/business loans, credit cards
+  
+--
+
+  - ### Capital raising - investment banking (issue stock and bonds)
+  
+--
+
+  - ### Investment advisory - investment/trading/brokerage/settlement
+
+--
+
+  - ### Wealth management - Private banking (bespoke investing)
+  
+--
+  
+> ## All involve **moving** or **raising** or **investing** *capital* and *money*
+
+---
+
+# FinTech dynamics - contd.
+
+--
+
+## Fintechs:
+
+--
+
+  - ### Payments - digital wallets (PayPal, Venmo), Cyptocurrencies 
+  
+--
+
+  - ### Lending - P2P lending (LendingClub, Prosper, Kabbage)
+  
+--
+
+  - ### Capital raising - crowdfunding, ICOs
+  
+--
+
+  - ### Investment - robo-advisors (Wealthfront, Betterment)
+  
+--
+
+  - ### Wealth management - Credit Karma, Mint 
+  
+--
+  
+> ## Traditional banks threatened on all fronts **piece** by **piece**
+
+---
+
+class: center, middle
+
+# So what is FinTech?
+
+--
+
+> ##  It is **technological innovations** that improve how *money* and *capital* are **transferred, raised and invested**
+
+---
+
+class: center, middle
+
+# What is the promise of FinTech?
+
+--
+
+> ##  It is the potential to tranform our financial lives in the near future 
+
+---
+
+class:  inverse, center, middle
+name: Course Overview
+
+# Course Overview
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+---
+
+class: center, middle
+
+# What is this course about?
+
+--
+
+## Providing you with the broadest exposure to FinTech, so that you are  well versed in languages of both **finance** and **tech**
+
+
+---
+
+# Course Objectives
+
+--
+
+## Finance is changing! 
+
+> ### "Silicon valley is coming.  There are hundreds of startups with a lot of brains and money working on various alternatives to traditional banking"
+>
+> `r tufte::quote_footer('--- Jamie Dimon, CEO JPMorganChase')`
+
+## Prepare you for the change!
+ - How is FinTech reconfiguring financial services business models? What are the key disruption points? What determines success in FinTech?
+ 
+ - What are the critical technology strategies and foundational technologies in FinTech?
+ 
+ 
+---
+
+# Course Organization
+
+--
+
+## Recall, we defined Fintech as:
+
+### technological innovations that improve how *money* and *capital* are **transferred, raised and invested**
+
+--
+
+## So, we will explore in depth the technology and business side of innovations in how *money* and *capital* are:
+
+> ### transferred (**PayTech**), raised (**CreditTech**), and invested (**InvestTech**)
+
+---
+
+## But what about Bitcoin?
+
+--
+
+### We will cover Cryptocurrencies like Bitcoin and Etherum too! 
+  - ### Under **CryptoFinance**, as part of **PayTech**
+
+---
+
+# Module 1: PayTech (Capital Transfer)
+
+--
+
+## We will look at:
+
+  - Digital challengers to financial institutions that promise to make paying for things, and getting paid for things, **faster, cheaper and more secure**
+
+  - Do *not* rely on **decentralized** technologies like **blockchain**
+   - e.g. Digital Wallets (PayPal, Venmo), Apple and Android Pay
+
+--
+
+Broadly,
+
+> - How do payments traditionally occur? What are the inefficiencies that tech innovations attack?
+> - How is the data advantage of new technologies leveraged to build entire payment ecosystems?
+> - How are PayTech business built both in markets with and without payment infrastructure
+
+---
+
+# Module 2: CryptoFinance 
+
+--
+
+## We will look at:
+
+  - Digital challengers to financial institutions that promise to make paying for things, and getting paid for things, **faster, cheaper and more secure**
+
+  - Rely on **decentralized** technologies like **blockchain**
+   - e.g. cryptocurrencies like Bitcoin, Ethereum
+
+--
+
+Broadly,
+
+> - Technical aspectes of blockchain technology that powers cryptocurrencies
+> - Inefficiences in transaction processing and the advantages of blockchain's record-keeping technology
+> - Cryptocurrencies as a tradeable asset
+> - Blockchain as a business (smart contracts)
+
+---
+
+# Module 3: CreditTech (Capital Raising)
+
+--
+
+## We will look at:
+
+  - how FinTech is helping individuals and businesses raise capital more **broadly** and **efficiently** 
+
+--
+
+Broadly,
+
+> - How credit works traditionally, inefficiencies, P2P lending expanding credit access, translating into profitability 
+> - How equity capital raising works traditionally, disruption through crowdfunding and ICO 
+> - Disruption across the funding spectrum and response by traditional institutions
+
+---
+
+# Module 4: InvestTech (Investing money)
+
+--
+
+## We will look at:
+
+  - how FinTech is fundamentally changing the way we investment money 
+
+--
+
+Broadly,
+
+> - Technologies like ML and AI - stock selection, targeted portfolios 
+> - Using big data and unstructured data (mobile sources and social media) to understand consumers and  better plan their investments
+> - Business models of robo-advisors that combine ML, AI to deliver customized financial advice at low cost 
+
+---
+class: inverse, center, middle
+name: Highlights
+
+# Course Highlights
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+`r fa('globe')` https://lsu-fintech.github.io/4910/
+
+---
+
+# Hands on course
+
+| Component                           | Weight |
+|:-|-:|
+| 2 × case studies/reports/assignments (15% each) | 30% |
+| 3 × mini project/presentations (10% each)		| 30% |
+| 1 × main project/presentation    				    | 30% |
+| Participation                   				    | 10% |
+
+
+---
+
+
+# You, at the end of this course
+
+![Awesome!](Images/week1-awesome.jpg)
+
+
+
+
+
+
