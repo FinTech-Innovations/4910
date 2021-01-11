@@ -85,8 +85,8 @@ If you have a documented disability and anticipate needing accommodations in thi
 ## Schedule
 
 * Week 1: **The Promise of FinTech** (RN)
-  + Traditional financial systems and inefficiencies
-  + How does FinTech improve the financial system?
+  + Introducton to FinTech 
+  + Course overview
   
 * Weeks 2-3: **Pay Tech** (RN)
   + Digital wallets (Paypal)
