@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rajesh Narayanan" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lecture 1
+## The Promise of FinTech
+### Rajesh Narayanan
+### Department of Finance, LSU
+### 2021/01/11 (updated: 2021-01-10)
+
+---
+
+
+
+# Table of contents
+
+1. [Prologue](#prologue)
+
+2. [FinTech](#FinTech)
+
+3. [Course Overview](#Course Overview)
+
+4. [Course Highlights](#Highlights)
+
+
+---
+
+class:  inverse, center, middle
+name: prologue
+
+# Prologue
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+# Introductions
+
+--
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/&gt;&lt;/svg&gt; https://lsu-fintech.github.io/4910
+
+--
+
+### **Us**
+#### Professors:
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"&gt;&lt;path d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"/&gt;&lt;/svg&gt; Rajesh Narayanan, Dimuthu Ratnadiwakara, Raja Velu
+
+#### Teaching Fellow: 
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"&gt;&lt;path d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"/&gt;&lt;/svg&gt; Sarp Mertdogan 
+
+--
+
+### **You**
+
+A quick roundtable of names, majors, background, interest in the course.
+
+---
+
+
+class:  inverse, center, middle
+name: FinTech
+
+# FinTech
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+class: center, middle
+
+# So, What is Fintech?
+
+--
+
+### Many answers....all probably correct in some aspect
+
+---
+
+# Fin + Tech
+
+--
+
+## As a buzzword, its new!
+
+--
+
+### ... but Finance and Technology are not new!
+
+---
+
+# A walk down history
+
+ - ### Money in a barter economy
+ 
+--
+
+ - ### Checks in a paper money economy
+ 
+--
+
+ - ### ATM machines, online banking and trading, wire transfers....
+ 
+--
+
+&gt; ## Financial services industry has **always** been at the forefront of technological innovation, and it has been constantly **disrupted** by new technology
+
+---
+
+# So, what's new this time around?
+
+--
+
+## Historical trailblazers
+- ### central banks and financial institutions
+
+--
+
+## Current trailblazers
+- ### Tech companies
+
+--
+
+&gt; ## Google, Amazon, Facebook taking on **finance functions** like **payments, lending and investment**
+  
+---
+
+# Why Tech firms?
+
+--
+
+ - ### Big data boom and unparalleled access to consumer data
+ 
+--
+
+ - ### Not subject to regulations like financial institutions
+
+--
+
+&gt; ### Aggressive in taking risks: **new products, technology and markets**
+
+---
+
+# Fintech Industry Equilibrium
+
+--
+
+## Traditional banks?
+
+--
+
+ - ### In danger of being technologically leapfrogged!
+ 
+--
+
+&gt; ## New industry equilibrium?
+&gt; ### **Banks becoming tech firms** - Acquiring new talent and companies
+&gt; ### **Tech firms becoming banks** - Acquiring bank charters
+
+---
+
+# FinTech dynamics
+
+--
+
+## Traditional banking services:
+
+--
+
+  - ### Payment services - deposit accounts
+
+--
+  - ### Lending services - personal/business loans, credit cards
+  
+--
+
+  - ### Capital raising - investment banking (issue stock and bonds)
+  
+--
+
+  - ### Investment advisory - investment/trading/brokerage/settlement
+
+--
+
+  - ### Wealth management - Private banking (bespoke investing)
+  
+--
+  
+&gt; ## All involve **moving** or **raising** or **investing** *capital* and *money*
+
+---
+
+# FinTech dynamics - contd.
+
+--
+
+## Fintechs:
+
+--
+
+  - ### Payments - digital wallets (PayPal, Venmo), Cyptocurrencies 
+  
+--
+
+  - ### Lending - P2P lending (LendingClub, Prosper, Kabbage)
+  
+--
+
+  - ### Capital raising - crowdfunding, ICOs
+  
+--
+
+  - ### Investment - robo-advisors (Wealthfront, Betterment)
+  
+--
+
+  - ### Wealth management - Credit Karma, Mint 
+  
+--
+  
+&gt; ## Traditional banks threatened on all fronts **piece** by **piece**
+
+---
+
+class: center, middle
+
+# So what is FinTech?
+
+--
+
+&gt; ##  It is **technological innovations** that improve how *money* and *capital* are **transferred, raised and invested**
+
+---
+
+class: center, middle
+
+# What is the promise of FinTech?
+
+--
+
+&gt; ##  It is the potential to tranform our financial lives in the near future 
+
+---
+
+class:  inverse, center, middle
+name: Course Overview
+
+# Course Overview
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+class: center, middle
+
+# What is this course about?
+
+--
+
+## Providing you with the broadest exposure to FinTech, so that you are  well versed in languages of both **finance** and **tech**
+
+
+---
+
+# Course Objectives
+
+--
+
+## Finance is changing! 
+
+&gt; ### "Silicon valley is coming.  There are hundreds of startups with a lot of brains and money working on various alternatives to traditional banking"
+&gt;
+&gt; &lt;footer&gt;--- Jamie Dimon, CEO JPMorganChase&lt;/footer&gt;
+
+## Prepare you for the change!
+ - How is FinTech reconfiguring financial services business models? What are the key disruption points? What determines success in FinTech?
+ 
+ - What are the critical technology strategies and foundational technologies in FinTech?
+ 
+ 
+---
+
+# Course Organization
+
+--
+
+## Recall, we defined Fintech as:
+
+### technological innovations that improve how *money* and *capital* are **transferred, raised and invested**
+
+--
+
+## So, we will explore in depth the technology and business side of innovations in how *money* and *capital* are:
+
+&gt; ### transferred (**PayTech**), raised (**CreditTech**), and invested (**InvestTech**)
+
+---
+
+## But what about Bitcoin?
+
+--
+
+### We will cover Cryptocurrencies like Bitcoin and Etherum too! 
+  - ### Under **CryptoFinance**, as part of **PayTech**
+
+---
+
+# Module 1: PayTech (Capital Transfer)
+
+--
+
+## We will look at:
+
+  - Digital challengers to financial institutions that promise to make paying for things, and getting paid for things, **faster, cheaper and more secure**
+
+  - Do *not* rely on **decentralized** technologies like **blockchain**
+   - e.g. Digital Wallets (PayPal, Venmo), Apple and Android Pay
+
+--
+
+Broadly,
+
+&gt; - How do payments traditionally occur? What are the inefficiencies that tech innovations attack?
+&gt; - How is the data advantage of new technologies leveraged to build entire payment ecosystems?
+&gt; - How are PayTech business built both in markets with and without payment infrastructure
+
+---
+
+# Module 2: CryptoFinance 
+
+--
+
+## We will look at:
+
+  - Digital challengers to financial institutions that promise to make paying for things, and getting paid for things, **faster, cheaper and more secure**
+
+  - Rely on **decentralized** technologies like **blockchain**
+   - e.g. cryptocurrencies like Bitcoin, Ethereum
+
+--
+
+Broadly,
+
+&gt; - Technical aspectes of blockchain technology that powers cryptocurrencies
+&gt; - Inefficiences in transaction processing and the advantages of blockchain's record-keeping technology
+&gt; - Cryptocurrencies as a tradeable asset
+&gt; - Blockchain as a business (smart contracts)
+
+---
+
+# Module 3: CreditTech (Capital Raising)
+
+--
+
+## We will look at:
+
+  - how FinTech is helping individuals and businesses raise capital more **broadly** and **efficiently** 
+
+--
+
+Broadly,
+
+&gt; - How credit works traditionally, inefficiencies, P2P lending expanding credit access, translating into profitability 
+&gt; - How equity capital raising works traditionally, disruption through crowdfunding and ICO 
+&gt; - Disruption across the funding spectrum and response by traditional institutions
+
+---
+
+# Module 4: InvestTech (Investing money)
+
+--
+
+## We will look at:
+
+  - how FinTech is fundamentally changing the way we investment money 
+
+--
+
+Broadly,
+
+&gt; - Technologies like ML and AI - stock selection, targeted portfolios 
+&gt; - Using big data and unstructured data (mobile sources and social media) to understand consumers and  better plan their investments
+&gt; - Business models of robo-advisors that combine ML, AI to deliver customized financial advice at low cost 
+
+---
+class: inverse, center, middle
+name: Highlights
+
+# Course Highlights
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/&gt;&lt;/svg&gt; https://lsu-fintech.github.io/4910/
+
+---
+
+# Hands on course
+
+| Component                           | Weight |
+|:-|-:|
+| 2 × case studies/reports/assignments (15% each) | 30% |
+| 3 × mini project/presentations (10% each)		| 30% |
+| 1 × main project/presentation    				    | 30% |
+| Participation                   				    | 10% |
+
+
+---
+
+
+# You, at the end of this course
+
+![Awesome!](Images/week1-awesome.jpg)
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
