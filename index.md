@@ -4,7 +4,7 @@ layout: default
 
 #### **When:** Mon 6-9 PM. Office Hours by Appointment
 #### **Where:** Remote! [zoom link](https://lsu.zoom.us/j/97203794084?pwd=UjZjL3EzczA2T2ZzV2FqNUhZS01PUT09)
-#### **Web:** [https://lsu-fintech.github.io/4910/](https://lsu-fintech.github.io/4910/)
+#### **Web:** [https://fintech-innovations.github.io/4910/](https://fintech-innovations.github.io/4910/)
 
 #### **Communication:** Create a **Discord** account using your **LSU email** here: [FIN4910 Discord](https://discord.gg/ezF2FBxm38) 
 
