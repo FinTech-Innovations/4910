@@ -28,7 +28,7 @@ knitr::opts_chunk$set(message = FALSE)
 
 **LOAD R PACKAGES**
 
-```{r, message=FALSE, error=FALSE}
+```{r}
 library(tidyverse) # imports all tidyverse packages incuding dplyr, ggplot2
 library(digest) # Create hash function digests for R objects
 ```
@@ -92,7 +92,7 @@ Initially, we need to create an empty blockchain with the following:
 
 > model objects that are like trees. You can create a hierarchical structure with a list because unlike vectors, a list can contain other lists.
 
-```{r create blockchain list}
+```{r}
 # Create the empty blockchain as embedded lists
 blockchain <- list(
     chain = list(),
@@ -104,7 +104,7 @@ str(blockchain)
 
 Add the node name to the blockchain.
 
-```{r node}
+```{r}
 # Add the node name
 blockchain$nodes <- "Betty's PC"
 # Review the blockchain so far
@@ -114,7 +114,7 @@ str(blockchain)
 
 Next we will create a function that creates a new block calculating the hash with the digest function from the [digest R package](https://CRAN.R-project.org/package=digest). The first block is called the Genesis block.
 
-```{r new block}
+```{r}
 # Create a new block in the Blockchain function
 nextBlock <- function (previousHash, transactions){
   thisHash <- digest((length (blockchain$chain) + 1),algo="sha256")
@@ -133,7 +133,7 @@ str(blockchain)
 
 Now create the second block reusing the existing function, nextBlock.
 
-```{r next block}
+```{r}
 # Create the next block, setting this block's hash to hashBlock and prevhashBlock to the Genesis block's hash
 prevhashBlock <- blockchain$chain$block[1]$block$thisHash
 blockchain$chain$block <- nextBlock(previousHash=prevhashBlock,transactions="FACT ABC") 
