@@ -1,14 +1,28 @@
-# Assignment 01
+# Assignment 02
 
 
-Listen: [Money talks: The FinTech edge](https://www.stitcher.com/s?eid=46504704&refid=asa)
+Listen:
 
-Watch: [How FinTech is Shaping the Future of Banking](https://www.youtube.com/watch?v=pPkNtN8G7q8)
+- [Barron's Streetwise: Live with Visa CEO](http://www.barrons.com/video/barrons-streetwise-live-with-visa-ceo/71FE5E41-2B2B-4035-91D7-B65B4E942E8D.html)
 
-Read: [Silicon Valley Tried to Upend Banks. Now It Works With Them](https://www.nytimes.com/2017/02/22/business/dealbook/silicon-valley-tried-to-upend-banks-now-it-works-with-them.html)
+ - [Barron's Streetwise: How Square is Cashing In. Plus, IPO-Palooza](https://podcasts.apple.com/us/podcast/how-square-is-cashing-in-plus-ipo-palooza/id1504250328?i=1000502050751)
+
+Watch:
+
+- [Fintech Finance Presents: The Paytech Show 3.02 - The Best Payment Conversation](https://www.youtube.com/watch?v=zqI5KgIPc-w)
+
+- [Fintech Finance Presents: The Paytech Show 4.06 - How to Achieve Excellence in Payments](https://www.youtube.com/watch?v=o0kPEgtVwS4&list=PL_GorMf8_ZIqLrpZ1U-AhWGONaiBbpPn6&index=6)
+
+Read:
+
+- [Amazon Pay Accepted Here? Web Giant Aims to Put Digital Wallet in Stores]( https://www.wsj.com/articles/amazon-pay-accepted-here-web-giant-aims-to-put-digital-wallet-in-stores-1542796827)
+
+- [A Bank in your Pocket](https://www.economist.com/special-report/2019/05/02/young-people-and-their-phones-are-shaking-up-banking)
+
+- [Plug and pay](https://www.economist.com/finance-and-economics/2019/11/21/big-tech-takes-aim-at-the-low-profit-retail-banking-industry)
 
 
-Think and answer (be prepared to discuss next class):
+Think and prepare a two-page report (group presentation next class):
 
 1. What does your ideal digital banking experience look like? More specifically, tell us what you would like to be able to do through your digital banking experience?
 
