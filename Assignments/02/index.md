@@ -28,9 +28,9 @@ Project:
 
 2. Write a 2-page group report on:  
 
-- a. What (tech) solution does it offer? What pain point or inefficiency in the payment system does it address?  
+- What (tech) solution does it offer? What pain point or inefficiency in the payment system does it address?  
 
-- b. What is its value proposition? What is its business model? What is the key driver of its profitability?
+- What is its value proposition? What is its business model? What is the key driver of its profitability?
 
 3. Prepare a 10 min presentation for next class, and be ready to answer questions.
 
