@@ -22,14 +22,21 @@ Read:
 - [Plug and pay](https://www.economist.com/finance-and-economics/2019/11/21/big-tech-takes-aim-at-the-low-profit-retail-banking-industry)
 
 
-Think and prepare a two-page report (group presentation next class):
+Project:
 
-1. What does your ideal digital banking experience look like? More specifically, tell us what you would like to be able to do through your digital banking experience?
+1. Identify a PayTech company that interests your group that we have not talked about in detail in class. Post your choice on Discord.  First come first served!
 
-2. What is missing from your current digital banking experience? What could be improved?
+2. Write a 2-page group report on:  
 
-3. How would your ideal digital banking experience enhance or improve your financial wellbeing?
+- a. What (tech) solution does it offer? What pain point or inefficiency in the payment system does it address?  
 
+- b. What is its value proposition? What is its business model? What is the key driver of its profitability?
+
+3. Prepare a 10 min presentation for next class, and be ready to answer questions.
+
+Grading rubric:
+- Report: 50%
+- Presentation: 50%
 
 
 
