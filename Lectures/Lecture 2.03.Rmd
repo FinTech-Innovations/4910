@@ -76,7 +76,7 @@ name: Retail Payment Systems
   
 ---
 
-#Origins of Credit Cards  
+# Origins of Credit Cards  
 - ## Checks (and e-checks/ACH) are not an optimal or time-critical transactions 
   - ### Settlement (transfer of money) is not real time!
       - #### Think of paying for dinner at a restaurant using paper checks or wire-transfer!
@@ -96,7 +96,7 @@ name: Retail Payment Systems
 ---
 
 # Original: Diner's Card (now part of Discover)
-![DinersClubCard](Images/Lec2-DinersClubCard.png)
+.center[![DinersClubCard](Images/Lec2-DinersClubCard.png)]
 
 ---
 
@@ -137,297 +137,338 @@ other rails either ACH or bank wire.
 
 ???
 
----
+- But wait a minute, each party has to be compensated for making this convenience happen. So instead of transferring the full $100 to the merchants, each party will take their slice of this pie. We'll have a deeper look at how the pie is divided, but for now note that the issuer will take the biggest piece of the pie for their intermediation tasks. Their compensation is called the interchange fee and can range up to 2 to 3% depending on the bank. In this example,we're using a 2.15% interchange fee. So the issuer will keep $2.15 for the compensation and transfer only 97.85 to the merchant's bank.
 
-# Compared to cash payments, these two flows are not synchronous!
-- ## You get **information** that you will be paid before you are **actually paid**
+- The acquirer will also take a cut here, pulling 0.15% or 15 basis points as the acquiring fee for simply having the merchant's bank account there to receive money.
 
---
+- And just like a cell phone company charging for each call or message, the network itself will have an assessment for this communication charging in this example, 15 basis points.
 
-- ## Time separation can result in fraud!
-  
-    ![CatchMe](Images/Lec2-CatchMe.jpg)
---
+- And finally for providing the hardware and software to accept the credit card and process the transaction information, the processors will charge a processing fee in this case, 5 basis points.
 
-- ## Transaction failure due to asymmetric information
-  
----
+- So if you sum these all up, the merchant is getting far less than the full $100. In this example, after four parties taking their cuts, only 97.50 is transferred to the merchant's account, leaving 2.5% as the total transaction cost.
 
-# Who provides the trust that you will get paid?
+- This is a business cost for the merchants to accept credit cards. So eventually, either they will pass them on to the consumers either directly as a credit card surcharge or indirectly in their prices. Or smaller merchants won't even be able to afford so they won't take credit cards.
 
---
-
-- ## **Financial intermediaries** 
-  - ### solve the asymmetric information problem by putting in safeguards like,
-      - #### reversibility of payments
-      - #### pre-authorization of funds
-      - #### electronic routing
-      - #### advanced encryption etc.
+-  And the settlement process is not over yet because the loan has to be repaid. The bank will send the customer a bill at the end of the billing period and the customer then chooses to either pay back immediately, pay later with interest rate charged or to default on this loan. But this process is completely between the issuer and the consumer and is decoupled from the actual transaction.
 
 ---
 
-# But trust does not come free!
+# Credit Card Network: Business model
 
-- ## Banks charge transaction fees like
-  - ### overdraft fee
-  - ### returned check/insufficient funds fees
-  - ### minimum checking account balance etc.
-  
-> # PayTech is about attacking this pain point -  reducing transaction costs
+- ## Network operators: High fixed costs, low marginal costs
+  - ## High barriers to entry; scalable 
+      - ### Visa and Mastercard are similar to cell phone companies
+  - ## Set overall fee for transactions, and negotiate division of fees across parties
+
+---
+
+# Credit Card Network: Business model
+
+- ## Other players: Fees depend on risk exposure of each party
+  - ## Issuer bank: highest risk = highest fee
+      - ### risk of customer default, fraud; fee compensates for authentication and risk management services
+  - ## Acquirer bank: smaller risk; simply holds the merchant's account
+  - ## Processor: least risk; provide hardware and software to merchants; not financial institutions
   
 ---
 
-# Now Consider using EFT intead of writing a check 
+# **Key Point**
 
-- ### EFT - Electronic Fund Transfer (eg. direct deposit, online payments)
-- ### Uses ACH - Automated Clearing House network instead of the checking system
-  - ### An electronic communication system that plugs in to the existing payment infrastructure
-  - ### ACH network is run by the central bank (Fed), and a private company called the Clearing House
+> # PayTech players compete on tech rather than financial risk-taking; They are independent payment processors (PayPal, Square, Stripe)
 
 ---
 
-# EFT using ACH
+# Advantages 
 
- ![EFT](Images/Lec2-EFT.jpg)
+- ### Speed!- Communications sent and received in real time
+- ### Less risk for merchants - bank pays not customer (also process debit and prepaid cards)
+- ### Value added services for consumers - its a line of credit!; perks (FF miles); dispute resolution; fraud detection and prevention
+  
  
-Solid lines represent the flow of information and dashed lines represent the flow of funds.
-
----
-
-# Advantages of ACH over Checking system
-
-- ## Cuts down time lage between information flow and money flow
-- ## Low cost - through batch processing
-
-> # The low cost of ACH is a primary reason which most PayTech innovations are built on the ACH system
-
----
-
-# Disadvantage of the ACH system
-
-- ## Not very easy to use
-- ## User identifiers (routing/account number) take long to retrieve
-- ## Different banks and merchants have different user interfaces (not very user friendly)
-
-> # PayTech innovations take good, but not user-friendly infrastructure, and build user-friendly interfaces on top of it
-
----
-
-# User friendly Wrappers
-
-- ## User identifiers (phone numbers, email addresses)
-  - ### Who remembers routing and account numbers?!
-- ## Biometric authentication (face or touch id)
-  - ### cumbersome bank level authentication
+> ## PayTech pentration is low when credit card penetration is high (US) and vice-versa (China, India)!
   
 ---
 
-# Digital Wallets are....
-> # these **wrappers** 
+# Drawbacks 
 
-- ## They are built on existing *legacy* infrastructure
-- ## They take such information and convert them back into a format that is compatible with existing infrastructure
-
-- ## eg. PayPal, Venmo, Apple Pay, AliPay...
-
----
-
-class:  inverse, center, middle
-name: Digital Wallets
-
-#  PayTech|2.01: Digital Wallets
-
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
-
----
-
-# 2.01: PayTech | Digital Wallets
-## Outline
-  + ### Pure: PayPal
-  + ### Hybrid (Payment + additional financial services): AliPay
-  + ### Hybrid (Payment + social network): Facebook, WeChat
-
----
-
-# Pure Digital Wallet: PayPal
- + ### How does the tech work
- + ### What is the business model
- + ### Room for improvement
-  
-
----
-
-# Regular vs. Digital Wallet
-  + ### bank account still the source of money - connection is digital instead of physical
-  + ### You put money in your wallet - virtually transfer from connected bank 
-  + ### You pay others - digitally send money into the virtual wallet of other PayPal users using friendly user identifiers like phone numbers,
-
---
-# Except, 
-
-  + ### Actual money follows later using conventional rails like ACH
-  
----
-
-# How PayPal operates
-
-
-![PayPal](Images/Lec2-PayPal.png)
-> - ### PayPal has a bank account but is **not** a bank; performs a custodial role
-
----
-
-# Key Points
-- ## Decoupling
-  - ### Information flow is in the form of virtual money balances within PayPal
-  - ### Money flows through existing payment rail - ACH
- 
-- ## Efficiencies
-  - ### Banks do what they are best at - moving money efficiently and securely
-  - ### Techs do what they are good at - information processing and basic authentication 
-
----
-
-# Business model 
-
-  - ### Using the system is free
-  - ### Initially imposed withdrawal fee - moving wallet balance back to bank, but now,
-      - ### Free to most consumers (Premium for *instant* withdrawal)
-      - ### Charge merchants
-      - ### Charge on credit card based balance transfers
-
----
-
-# Revenue
-
-- ## Draws in and keeps the most **price-sensitive** customers
-- ## And maintains margins by charging merchants a slightly higher rate (2-3% per transaction)
-
----
-
-# Costs
-
-- ## Fixed cost **low** 
-  - ### Uses existing hardware (existing payment rail); only software development
-- ## Variable costs, also **low**
-  - ### Not a bank - so no regulatory costs
-  - ### maintenance of wallet-linked bank accounts and compliance - responsibility of bank partner
-
----
-
-# Profitablity
-
-- ## Marginal costs of processing one more transaction are minimal - **Scalable!**
-- ## Stable revenue +  low fixed and marginal cost = **high** profit margin (relative to traditional financial institution)
-
----
-
-# Limitation of pure digital wallets
-- ## Competition high - build one with a software development team and bank partner
-- ## Revenue model - make money by keeping money in digital wallets and transacting, but no incentive for consumer to keep money in wallet!
-- ## Targeted toward e-commerce; tough to use in brick and mortar places
-
----
-
-# Hybrid Digital Wallet: AliPay
-- ## PayPal equivalent in China (subsidiary of Alibaba)
-- ## AliPay = eBay + Amazon
-
----
-
-# How AliPay operates - Innovation 1
-
-![Alipay1](Images/Lec2-AliPay.png)
-> ## Partner is a **Money Market Fund** instead of a bank
-
----
-
-# Business model
-- ## Incetivize users to stay - positive interest rate
-- ## But why stop there?  -- ** Ant Financial!**
-  - ## Further connect MMA with more investment options like P2P lending, brokerage, insurance
-  
-> # Digital wallet becomes a full-service ecosystem centered around the wallet!
-
----
-
-# How AliPay operates - Innovation 2
-
-![AliPay2](Images/Lec2-AliPayConsumerInterface.png)
-
----
-
-# How AliPay operates - Innovation 2
-
-![AliPay3](Images/Lec2-AliPayMerchantInterface.png)
-
----
-
-# How AliPay operates - Innovation 2
-
-![AliPay4](Images/Lec2-AliPayQRcode.png)
-
-
----
-
-# Business model
-- ## Expand wallet to **offline F2F settings** - QR code scanning
-  - ### Expands market to others (not millenials!) who don't do much online shopping
-  - ### No need for expensive credit card terminal. All merchant/consumer info is embedded in QR code 
-  - ### No hardware required except for a smartphone!
-  - ### Great for emerging markets with lot of offline transactions and without a robust credit card network
-  
----
-
-# Hybrid Digital Wallet + Social Network
-- ## Derived from, or embedded in social networks
-  - ### Venmo: payment platform that adds a layer of social meaning
-  - ### WeChat: Social network that grows a payment platform from within
-- ## Tech identical to digital wallet - user interface wrapper around existing payment rails
-- ## Use social networks to grow the payment ecosystem (innovation is the business site)
-
----
-
-# Venmo (part of PayPal now)
-- ## Combine social element and the financial element of a single financial transaction
-  - ### Splitting a bar tab + turning it into a social network status update
-- ## Financial overlay 
-  - ### Avoids awkwardness
-  - ### Increases the value of the social network
-
----
-
-# Venmo (part of PayPal now)
-- ## Monetiztion
-  - ### Mining financial transactions data on social network to gain insight into financial profiles
-  - ### Provide customized financial products based on insight
-  - ### Data privacy is a big issue
-  
-- ## Venmo has not systematically started monetizing yet....
-
----
-
-# WeChat (part of Tencent)
-
-- ## Chinese equivaluent of Facebook + WhatsApp
-- ## Overlay payment services on top of existing social network = WeChat Pay
-  - ### User identifiers = network handles
-  - ### Money flows through traditional payment rails
-  - ### Key innovation - getting users to use it
+- ## **Security**
+  - ## Strong security at back end (newtorks and banks), but weak at front end (POS)
+      - ### Offline transactions: No encryption (until recently) - card skimming using smoothing device of physical copy!
+      - ### Online transacations: No unified standard for account number security - merchants can be hacked (e.g. Target)
       
-
----
-# WeChat Pay: Launch Lucky Money Campaign
-![WeChat1](Images/Lec2-WeChat-LuckyMoney.jpeg)
-
 ---
 
-# WeChat Pay: Follow up  
-- ### marketplace (like Facebook marketplace)
-![WeChat2](Images/Lec2-WeChat2.png)
+# Inefficiencies (related to business model)
+
+- ## **Limited customer base on both sides** 
+  - ## Merchants (Amex not accepted!)
+      - ### High upfront (hardware) & ongoing (software, processing fee) costs 
+      - ### Lack of cheap value added services (e.g. CRM, inventory management, tax prep.)
+  - ## Consumers 
+      - ### Only available to those with a (good) credit history (unbanked) 
+      
+---
+
+# Security Innovations
+
+## Flow of Information
+
+.center[![CCFlowofInformation1](Images/Lec2-CCFlowofInformation1.png)]
+
+???
+
+- The most important piece of information in a credit card transaction is the account related numbers, that is your card number, the expiration date, and the three or four digit control codes.
+
+- As we have already discussed, this information flows through multiple parties in a single transaction. In both online and offline transactions, account information flows from the customer via the processor to the merchant, then via the processor to the card network, then finally, to the issuing bank. 
+
+- Now lets look at where the vulnerabilities lie (and opportunites for innovation)
 
 ---
 
-# WeChat Pay
-- ### Full fledged platform competing with AliPay
-![WeChat1](Images/Lec2-WeChat1.png)
+# Security Innovations
+
+## Flow of Information - vulnerabilities
+
+.center[![CCFlowofInformation2](Images/Lec2-CCFlowofInformation2.png)]
+
+???
+
+- An attacker, called an adversary in cybersecurity parlance, has multiple potential attack points along this flow to try and capture the account information. But some points are more feasible than others.
+
+- We could safely assume that security on the back-end is much higher. Client account information is a core asset of any bank, so they all invest heavily to beef-up their own security to the highest possible standard.
+
+- Consequently, vulnerabilities mainly happen at the front end, that is either at the point of sale or close to it. Here, the banks and the networks have a lot less control, and this is precisely where the PAYTECH innovators come in. We have seen that they are best at front-end innovations. Here again, they're innovating at the front-end, this time, in the security aspect.
+
+---
+
+# Security Innovations
+
+## EMV Technology (Chip cards)
+
+.center[![CCFlowofInformation3](Images/Lec2-CCFlowofInformation3.png)]
+
+???
+
+- First, as we said before, account numbers can easily be stolen in a physical transaction by skimming. That is, using spoofing devices that looked like legitimate terminals to fool the customers into swapping their cards and thereby, given up all the unencrypted information stored in the magnetic stripes.
+
+- This risk is primarily being addressed with the EMV technology spearheaded by the card networks. Or in everyday terms, we know this as the chip cards which is now standard in the United States.
+
+- Lets look at how this works
+  
+---
+
+# Regular credit card - magnetic strip
+
+.center[![EMVTechnology1](Images/Lec2-EMVTechnology1.png)]
+
+???
+
+- This is good old credit card with a magnetic stripe. Stored on the stripe is the credit card number, the expiration date, plain and simple, not encrypted at all. So when you swipe it at a terminal the magnetic stripe is read, the card number is captured and then transmitted along the card network to the issuer. The undisguised nature of the information makes it vulnerable to skimming.
+  
+---
+
+#  Chip card
+
+.center[![EMVTechnology2](Images/Lec2-EMVTechnology2.png)]
+
+> ###The IC (Chip) performs a simple cryptographic function - it converts a fixed CC number into a **one-time random** number
+
+???
+
+- This is our standard chip card. The key difference is the chip which we now insert into a terminal instead of swiping.
+
+- The chip is essentially a tiny little computer that when you insert it gets powered on and does one simple function. It does what's called a key exchange with the chip enabled terminal to convert the plain card number into a completely random number. 
+
+- Every time it's different so this cannot be guessed. With this approach the terminal only captures the random number which then gets transmitted to the issuing bank for approval decisions.
+
+- The issuer, simply speaking, possesses a key to quickly decrypt this back into the plain count number on their end. Then it transmits its approval decision back through the network to the terminal.
+
+- The added step at the points-of-sale is the encryption and that's why chip card transactions generally take slightly longer than a card swipe. Moreover, the decryption only occurs at the bank end where security is much much higher. The only thing that the terminal transmits is the random number and the approve or decline decisions.
+
+- Therefore skimming will become pointless, even if the skimmer captures the information, they cannot decrypt it without attacking the bank. So they cannot really guess the card number to duplicate and the information that they capture becomes worthless to the skimmer.
+
+- So EMV is a good innovation for all physical transactions, but it doesn't really address the online vulnerabilities. 
+  
+---
+
+
+# Security Innovations
+
+## Network Site Tokenization
+
+.center[![CCFlowofInformation4](Images/Lec2-CCFlowofInformation4.png)]
+
+???
+
+- Second, we have seen that card information could also be stolen from the merchants if they're weakly encrypted there. This has been a big issue in this decade and the new technology solution to address this risk is called network site tokenization.
+
+- Lets see how this works
+
+---
+
+# Network Site Tokenization
+
+.center[![Tokenization1](Images/Lec2-Tokenization1.png)] 
+
+> ## Tokenization takes the role of encrypting and protecting the account information out of the hands of the merchants, and shifts them to a more specialized provider called a token vault.
+
+???
+
+- If the card number that you fill online is stored by the merchant, say when you click the save my payment info button, but stored in a vulnerable way, say in plain text an Excel file, an attacker could easily attack the merchant and obtain many card numbers in one swoop.
+
+- Tokenization is essentially a service that takes the role of encrypting and protecting the account information out of the hands of the merchants, and shifts them to a more specialized provider called a token vault.
+
+---
+
+# Network Site Tokenization
+
+.center[## Network Site Tokenization
+
+.center[![Tokenization2](Images/Lec2-Tokenization2.png)] 
+
+
+???
+
+- What the vaults do is that once the credit card number is entered by the consumer, it first provides a one-way encryption function that again, turns this number into a completely different and random number all together.
+
+- And only this number is stored on the merchant sites. This new random number is called a token.
+
+- And just like EMV even if someone hacks the merchant and captures these tokens, it will be meaningless to them because only the token vaults have the decryption keys to turn them back into the plain numbers.
+
+- So every time the card stored on the side is used, the vault simply decrypts the token gets the actual number then transmits through the card network to the issuing bank, where again the security is much higher. 
+- In this regard, the token vaults are essentially third-party security technology innovators, and many players compete in this emerging space. Many card networks like Visa or Mastercard operate their own vaults. Some are operated by banks some by digital wallet companies like PayPal and some are cybersecurity startups.
+
+---
+
+# Security Innovations
+
+##  Tokenization + Mobile Hardware Based Security
+
+.center[![CCFlowofInformation5](Images/Lec2-CCFlowofInformation5.png)]
+
+???
+- Finally, adversaries could go directly to the consumers and try to steal account information there. For instance, by hacking malware on their computers, or just physically taking the card like in a restaurant.
+
+- This risk is being addressed by a combination of tokenization and mobile hardware-based security. In the United States, the big players are Apple and Google.
+
+---
+
+#  Tokenization + Mobile Hardware Based Security: Apple Pay
+
+.center[![ApplePayTech1](Images/Lec2-ApplePayTech1.png)]
+
+???
+- The consumer has a credit card that they want to use with say Apple Pay. If you have used it before you know that you first need to enroll the card.
+
+---
+
+#  Tokenization + Mobile Hardware Based Security: Apple Pay
+
+.center[![ApplePayTech2](Images/Lec2-ApplePayTech2.png)]
+
+???
+- You'll fill in the card information on the phone, it is directly transmitted to the issuing bank which operates his own token vault. 
+
+---
+
+#  Tokenization + Mobile Hardware Based Security: Apple Pay
+
+.center[![ApplePayTech3](Images/Lec2-ApplePayTech3.png)]
+
+???
+- Once the issuer receives the information, it runs through the encryption function and tokenizes,
+converting it into again a random number.
+
+---
+
+#  Tokenization + Mobile Hardware Based Security: Apple Pay
+
+.center[![ApplePayTech4](Images/Lec2-ApplePayTech4.png)]
+
+???
+
+- This random token is then transmitted back to the phone and hard locked into the phone.
+
+- On an iPhone for instance, the token is stored in a separate secure storage element that's only accessible with a biometric layer of security like fingerprint or face recognition. 
+
+---
+
+#  Tokenization + Mobile Hardware Based Security: Apple Pay
+
+.center[![ApplePayTech5](Images/Lec2-ApplePayTech5.png)]
+
+???
+- So when the consumer wants to use the enrolled card at a terminal that supports Apple Pay they first need to biometrically authenticate on the phone.
+
+- Then the token stored on the phone acts like a credit card number and is used like EMV with the terminal to generate yet another random number. Because there's no physical card, this process is done wirelessly using near field communication, or NFC. 
+
+---
+
+#  Tokenization + Mobile Hardware Based Security: Apple Pay
+
+.center[![ApplePayTech6](Images/Lec2-ApplePayTech6.png)]
+
+???
+- After that only the random number is transmitted throughout the network all the way back to the issuing bank.  
+
+---
+
+#  Tokenization + Mobile Hardware Based Security: Apple Pay
+
+.center[![ApplePayTech7](Images/Lec2-ApplePayTech7.png)]
+
+???
+- which then can easily decrypt it and transmit the approval decision back to the terminal.
+
+---
+
+# Why has Apple (Google Pay) not taken off?
+ - ## They emphasize convenience (NFC instead of swiping - really?!)
+ - ## ...instead of **security** - a more secure tokenized transaction from end to end.
+ 
+> ## Key Point: Value proposition should be clear!
+  - ### Focus on the best feature of technology
+  - ### Don't sell toom many features in one setting!
+
+---
+
+# Expanding credit card usage base
+
+- ## Remember the pain points: CC are expensive for merchants
+  - ### high processing fee (not much can be done here - set by networkk operators)
+  - ### requires investment in hardware and software
+  - ### lack of value added services
+
+
+> ## PayTech innovations compete on lowering hardware and software costs, and on providing value added services for both offline and online merchants
+
+---
+
+# Offline Innovations (Square)
+
+.center[![Square](Images/Lec2-square.jpg)]
+
+---
+
+# Offline Innovations (Square)
+
+## Square is an independent payment processor
+- ## Key idea: Lower up front cost for smaller **brick and mortar** merchants prefer convenience and low cost
+  - ## Use existing device as POS terminal
+  - ## Intuitive UI and simple reporting software
+  - ## Eliminates the need for dedicated hardware
+
+---
+
+# Online Innovations (Stripe/PayPal)
+
+.center[![Stripe](Images/Lec2-Stripe.png)]
+
+---
+
+# Online Innovations (Stripe)
+
+## Stripe is an independent payment processor
+- ## Key idea: Lower up front cost for smaller **online** merchants prefer convenience and low cost
+  - ## Offer APIs (code snippets) as a conduit between the merchant's website and the back-end processing 
+  - ## Eliminates setting up expensive online infrastructure to accept card payments 
