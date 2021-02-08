@@ -15,9 +15,9 @@ Watch:
 
 Read:
 
-- [Blockchains and distributed ledgers in retrospective and perspective](
+- [Blockchains and distributed ledgers in retrospective and perspective](Assignments/03/10-1108_JRF-02-2017-0035.pdf)
 
-- [BlockChain Technology: Beyond Bitcoin]
+- [BlockChain Technology: Beyond Bitcoin](
 
 
 Group project (2-page report and class presentation): 
