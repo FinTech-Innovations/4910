@@ -15,10 +15,22 @@ Watch:
 
 Read:
 
-- [Amazon Pay Accepted Here? Web Giant Aims to Put Digital Wallet in Stores]( https://www.wsj.com/articles/amazon-pay-accepted-here-web-giant-aims-to-put-digital-wallet-in-stores-1542796827)
+- 
 
-- [A Bank in your Pocket](https://www.economist.com/special-report/2019/05/02/young-people-and-their-phones-are-shaking-up-banking)
+- 
 
-- [Plug and pay](https://www.economist.com/finance-and-economics/2019/11/21/big-tech-takes-aim-at-the-low-profit-retail-banking-industry)
+- 
 
+Group project (2-page report and class presentation): 
 
+Research and find an interesting use case of blockchain technology.  Here are three examples:
+
+- 1.	https://www.farmerconnect.com/
+- 2.	https://www.hyperledger.org/learn/publications/walmart-case-study
+- 3. https://medium.com/wharfstreetstrategies/blockchain-use-case-kyc-and-aml-7357578ffe1
+
+Prepare a report and presentation that addresses the following in your specific use-case:
+
+- 1. How does the existing system work?
+- 2. What are the inefficiencies that the use of blockchain technology addresses?
+- 3. What is the evidence on the benefits from the use of blockchain technology? What are the challenges?
