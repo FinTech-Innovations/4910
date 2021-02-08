@@ -1,4 +1,4 @@
-# Assignment 02
+# Assignment 03
 
 
 Listen:
@@ -15,8 +15,7 @@ Watch:
 
 Read:
 
-- [Blockchains and distributed ledgers in retrospective and perspective](FinTech-Innovations/4910/Assignments/03/10-1108_JRF-02-2017-0035.pdf)
-
+- [Blockchains and distributed ledgers in retrospective and perspective]((https://github.com/FinTech-Innovations/4910/tree/main/Assignments/03/10-1108_JRF-02-2017-0035.pdf)
 - [BlockChain Technology: Beyond Bitcoin](https://github.com/FinTech-Innovations/4910/tree/main/Assignments/03/AIR-2016-Blockchain.pdf)
 
 
