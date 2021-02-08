@@ -15,11 +15,10 @@ Watch:
 
 Read:
 
-- 
+- [Blockchains and distributed ledgers in retrospective and perspective](
 
-- 
+- [BlockChain Technology: Beyond Bitcoin]
 
-- 
 
 Group project (2-page report and class presentation): 
 
