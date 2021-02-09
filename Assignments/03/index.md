@@ -23,9 +23,9 @@ Group project (2-page report and class presentation):
 
 Research and find an interesting use case of blockchain technology.  Here are three examples:
 
-- 	https://www.farmerconnect.com/
-- 	https://www.hyperledger.org/learn/publications/walmart-case-study
--  https://medium.com/wharfstreetstrategies/blockchain-use-case-kyc-and-aml-7357578ffe1
+- 	[https://www.farmerconnect.com/](https://www.farmerconnect.com/)
+- 	[https://www.hyperledger.org/learn/publications/walmart-case-study](https://www.hyperledger.org/learn/publications/walmart-case-study)
+-  [https://medium.com/wharfstreetstrategies/blockchain-use-case-kyc-and-aml-7357578ffe1](https://medium.com/wharfstreetstrategies/blockchain-use-case-kyc-and-aml-7357578ffe1)
 
 Prepare a report and presentation that addresses the following in your specific use-case:
 
