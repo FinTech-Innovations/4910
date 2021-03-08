@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dimuthu Ratnadiwakara" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to R
+### Dimuthu Ratnadiwakara
+### LSU E. J. Ourso College of Business - Louisiana State University
+### Updated: 2021-03-08
+
+---
+
+
+
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 30px;
+    padding: 1em 1em 1em 1em;
+}
+&lt;/style&gt;
+
+
+
+
+
+# What is R?
+
+* R is a dialect of the S language. S language was developed by John Chambers as an internal statistical environment.
+* Created in 1991 by Ross Ihaka and Robert Gentlemen. Announced to the public in 1993.
+* It is free! Very active and vibrant user community.
+* Facilitates data manipulation, calculation, and graphics.
+* Base system runs most fundamental functions
+    + Need packages for other specific tasks
+* More info: https://www.r-project.org/about.html
+
+---
+# Getting started
+* Installing R (https://www.r-project.org/)
+* Installing R Studio
+    + RStudio is a free, open source IDE (integrated development environment) for R
+    + User friendly
+    + https://www.rstudio.com/products/rstudio/download/
+    + We are going to be using R studio to write code
+        - script
+        - console`
+        - environment
+* [Beginner's guide](https://github.com/dratnadiwakara/fin4820/blob/master/r4beginners_v3.pdf), [Getting started](https://support.rstudio.com/hc/en-us/articles/201141096-Getting-Started-with-R)
+
+---
+## RAM and HDD
+RAM and HDD, are both types of computer memory. RAM is used to store computer programs and data that CPU needs in real time. It is a working memory of the computer. RAM data is volatile and is erased once computer is switched off. HDD, hard disk has permanent storage and it is used to store user specific data.
+## Types of objects
+1. character: "LSU"
+2. numeric: 5.5342
+3. integer: 7
+4. logical: TRUE, FALSE or T,F for short
+5. factor: categorical variables, male or female
+---
+## Assignment operator
+- `&lt;-` symbol is the assignment operator
+
+```r
+x &lt;- 1
+y &lt;- 2
+x+y
+```
+
+```
+## [1] 3
+```
+
+```r
+text &lt;- "hello"
+print(text)
+```
+
+```
+## [1] "hello"
+```
+---
+
+# Vector: a combination of same class
+
+```r
+a &lt;-c("a","b","c")
+print(a)
+```
+
+```
+## [1] "a" "b" "c"
+```
+
+
+```r
+b &lt;- 1:10 
+# : operator is used to create integer sequence
+print(b)
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+```r
+print(b[4:8])
+```
+
+```
+## [1] 4 5 6 7 8
+```
+---
+
+## List: contains elements of different types
+Unlike vectors, a list can contain other lists.
+
+
+```r
+block_genesis &lt;-  list(
+  index = 1,
+  timestamp = Sys.time(),
+  data = "Genesis Block",
+  previous_hash = "26cdc16a4560df5fa2fd521dbca22670",
+  new_hash = "2eef25bf0bc4ee81e8c7cd1dfda65855b4b",
+  proof = 1
+  )
+```
+---
+# R Scripts
+* A script is a good way to keep track of what you’re doing
+* If you have a long analysis, and you want to be able to recreate it later, a good idea is to type it into a script
+* R scripts are saved as ‘.R’ files and can be opened later and rerun the analysis
+* Any command that begins with character ‘#’ is ignored when scripts are executed. These are called comments
+* To create an R Script use the following steps in RStudio
+    - File &gt; New File &gt; R Script
+    - Save the file
+* To run the script press: Ctrl + Alt + R
+* To run a particular line(s), click on the line(s) and press: Ctrl + Enter
+---
+# Control Structures
+Control structures allow programmer to control the structure of the program. We are going to talk about `if else`, `for`, `while`, etc. 
+---
+
+# if-else conditions
+Suppose you want to assign a credit rating based on the probability of default. If the probability of default is less than 1% the credit rating would be 'A'. If the probability of default is greater than 1% but less than 5% we want to assign a credit rating of 'B'. 5% or greater probability of default would be assigned a rating of 'C'.
+
+
+```r
+pd &lt;- 6
+creaditrating &lt;- NA
+
+if( pd &lt; 1) {
+  creaditrating &lt;- "A"
+} else if( pd &lt; 5) {
+  creaditrating &lt;- "B"
+} else {
+  creaditrating &lt;- "C"
+}
+
+print(paste("Credit rating is:",creaditrating))
+```
+
+```
+## [1] "Credit rating is: C"
+```
+---
+# for loop
+
+Print each number in the following vector
+
+```r
+numbervec &lt;- c(5,7,9)
+
+for( val in numbervec ) {
+  print(val*val)
+}
+```
+
+```
+## [1] 25
+## [1] 49
+## [1] 81
+```
+---
+
+# Functions
+A function is a block of code that is used to perform a task. A function typically takes and input, executes the block of code, and returns a value. &lt;br/&gt;
+&lt;br/&gt;
+More: https://www.youtube.com/watch?v=Pi0Yf-jn7O8
+
+## A function to add 2 numbers
+
+```r
+add2 &lt;- function(a,b) {
+  output = a+b
+  return(output)
+}
+```
+
+
+
+```r
+add2(2,6)
+```
+
+```
+## [1] 8
+```
+---
+# Packages
+R packages are collections of functions and data sets developed by the community. They increase the power of R by improving existing base R functionalities, or by adding new ones. For example, if you are usually working with data frames, probably you will have heard about ggplot2 or data.table, two of the most popular R packages.
+
+
+## Installing Packages
+
+```r
+install.packages("package")
+```
+## Loading a package
+
+```r
+library(package)
+```
+---
+class: center,middle
+
+#Hashing
+
+---
+# Hashing
+* Hasing algorithms produce a unique, fixed-length string for any given piece of data. 
+* A hashing algorithm can take that data and run a complex calculation on it and output a fixed-length string as the result of the calculation. 
+* The result is the file’s hash value.
+* One-way encryption
+---
+class: center,middle
+![Hashing](Hashing.jpg)
+&lt;br /&gt;(source: https://digitalkites.com/blog/hashing-guide/)
+---
+class: center, middle
+
+## The Earth has roughly `\(7.5 \times 10^{18}\)` grains of sand, or seven quintillion, five hundred quadrillion grains
+&lt;br /&gt;
+&lt;br /&gt;
+
+--
+## How many possible hashes are there?
+--
+`\(2^{256}=1.1579209 \times 10^{77}\)` combinations
+---
+# digest function
+
+The digest function applies a cryptographical hash function to arbitrary R objects. By default, the objects are internally serialized, and either one of the currently implemented MD5 and SHA-1 hash functions algorithms can be used to compute a compact digest of the serialized object.
+
+In order to compare this implementation with others, serialization of the input argument can also be turned off in which the input argument must be a character string for which its digest is returned.
+
+
+We will use the [digest](https://cran.r-project.org/web/packages/digest/index.html) package to generate the hashes.
+---
+## Installing and loading digest package
+
+
+```r
+install.packages("digest")
+```
+
+
+
+```r
+library(digest)
+```
+
+
+```r
+digest("Louisiana State University", "sha256")
+```
+
+```
+## [1] "deac2b442370fef09eb323d3c8b4db962c76d9c93ec3c5efe8baece275ec511d"
+```
+
+
+
+```r
+digest("Louisiana State university", "sha256")
+```
+
+```
+## [1] "73c9cad5779335a722987cd9a740b9dda8b8fa94a0247eb3d0c91f38f47c4c8f"
+```
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
