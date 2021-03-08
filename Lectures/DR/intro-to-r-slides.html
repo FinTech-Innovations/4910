@@ -240,6 +240,8 @@ class: center,middle
 * A hashing algorithm can take that data and run a complex calculation on it and output a fixed-length string as the result of the calculation. 
 * The result is the file’s hash value.
 * One-way encryption
+* Efficiently computed
+* Collision resistant: infeasiable that Hash(x)=Hash(y)
 ---
 class: center,middle
 ![Hashing](Hashing.jpg)
@@ -258,9 +260,11 @@ class: center, middle
 ---
 # digest function
 
-The digest function applies a cryptographical hash function to arbitrary R objects. By default, the objects are internally serialized, and either one of the currently implemented MD5 and SHA-1 hash functions algorithms can be used to compute a compact digest of the serialized object.
+&gt;The digest function applies a cryptographical hash function to arbitrary R objects. By default, the objects are internally serialized, and either one of the currently implemented MD5 and SHA-1 hash functions algorithms can be used to compute a compact digest of the serialized object.
 
-In order to compare this implementation with others, serialization of the input argument can also be turned off in which the input argument must be a character string for which its digest is returned.
+&gt;In order to compare this implementation with others, serialization of the input argument can also be turned off in which the input argument must be a character string for which its digest is returned.
+
+(source: https://www.rdocumentation.org)
 
 
 We will use the [digest](https://cran.r-project.org/web/packages/digest/index.html) package to generate the hashes.
@@ -287,7 +291,7 @@ digest("Louisiana State University", "sha256")
 ## [1] "deac2b442370fef09eb323d3c8b4db962c76d9c93ec3c5efe8baece275ec511d"
 ```
 
-
+**Avalanche effect**: if an input is changed slightly, the output changes significantly.
 
 ```r
 digest("Louisiana State university", "sha256")
