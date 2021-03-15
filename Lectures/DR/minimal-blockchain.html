@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Example Blockchain</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dimuthu Ratnadiwakara" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Example Blockchain
+### Dimuthu Ratnadiwakara
+### LSU E. J. Ourso College of Business - Louisiana State University
+### Updated: 2021-03-15
+
+---
+
+
+
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 30px;
+    padding: 1em 1em 1em 1em;
+}
+&lt;/style&gt;
+
+
+
+
+
+
+# Objective
+
+
+The objective is to learn how a generic blockchain works and understand some of the terminology through implementing a simple example.
+
+---
+
+# What is a Blockchain?
+
+--
+
+* A ledger
+
+--
+* Append only
+
+--
+* Distributed
+
+--
+
+&lt;br/&gt;
+
+[Wikipedia](https://en.wikipedia.org/wiki/Blockchain) defines a Blockchain as:
+
+&gt; a continuously growing list of records, called blocks, which are linked and secured using cryptography. Each block typically contains a hash pointer as a link to a previous block, a timestamp and transaction data.
+---
+
+## George Washington's Ledger
+
+![gwledger](gwledger.jpg)
+
+---
+![blockchain](blockchaindiagram.png)
+### Every block holds some data, a hash, and points to the previous block
+--
+
+### The hash is generated from all the information in the block
+--
+
+### If any information in the block changes, the hash changes
+--
+
+### A block cannot be altered retroactively without the alteration of all subsequent blocks and the collusion of the network
+---
+
+## Blockchains were first invented by the cryptographers Stuart Haber and Scott Stornetta in 1991
+
+
+
+
+```r
+knitr::include_graphics("nytimesbc.jpg")
+```
+
+&lt;img src="nytimesbc.jpg" width="200px" style="display: block; margin: auto;" /&gt;
+
+--
+### a way to timestamp digital documents to verify their authenticity
+
+---
+![](nyt1.png)
+---
+![](nyt2.png)
+---
+![](nyt3.png)
+---
+## Example: Donation Land Claims (DLC) - Oregon Territory 
+
+![](land.png)
+
+---
+## A block consists of the following:
+
+- Index  
+
+- Timestamp  
+
+- Data  
+
+- Hash of the previous block
+
+- Hash of the current block
+
+- *Consensus system* 
+
+---
+
+## Creating a block
+
+### Load `digest` package
+
+```r
+library(digest)
+```
+
+### A list as a block
+
+
+```r
+genesisblock &lt;- list(
+                  index=1,
+                  timestamp = Sys.time(),
+                  previousHash=0, 
+                  data="Genesis block",
+                  thisHash = NA
+                )
+```
+
+---
+
+## Setting the hash
+
+
+```r
+digest(genesisblock,algo = "sha256")
+```
+
+```
+## [1] "2de6181eb5a8d6880024ddb725c6f4ca30beb629cc11129c9684014a28ee9d9a"
+```
+
+
+```r
+genesisblock$thisHash &lt;- digest(genesisblock,algo = "sha256")
+print(genesisblock)
+```
+
+```
+## $index
+## [1] 1
+## 
+## $timestamp
+## [1] "2021-03-15 10:50:24 CDT"
+## 
+## $previousHash
+## [1] 0
+## 
+## $data
+## [1] "Genesis block"
+## 
+## $thisHash
+## [1] "2de6181eb5a8d6880024ddb725c6f4ca30beb629cc11129c9684014a28ee9d9a"
+```
+
+---
+
+## Convert to a block
+
+
+```r
+genesisblock &lt;- list(genesisblock)
+
+print(genesisblock)
+```
+
+```
+## [[1]]
+## [[1]]$index
+## [1] 1
+## 
+## [[1]]$timestamp
+## [1] "2021-03-15 10:50:24 CDT"
+## 
+## [[1]]$previousHash
+## [1] 0
+## 
+## [[1]]$data
+## [1] "Genesis block"
+## 
+## [[1]]$thisHash
+## [1] "2de6181eb5a8d6880024ddb725c6f4ca30beb629cc11129c9684014a28ee9d9a"
+```
+
+---
+
+## Initialize the Blockchain
+
+
+```r
+blockchain &lt;- NULL
+```
+
+## Add the genesis block to the blockchain
+
+```r
+blockchain &lt;- c(blockchain,genesisblock)
+
+print(blockchain)
+```
+
+```
+## [[1]]
+## [[1]]$index
+## [1] 1
+## 
+## [[1]]$timestamp
+## [1] "2021-03-15 10:50:24 CDT"
+## 
+## [[1]]$previousHash
+## [1] 0
+## 
+## [[1]]$data
+## [1] "Genesis block"
+## 
+## [[1]]$thisHash
+## [1] "2de6181eb5a8d6880024ddb725c6f4ca30beb629cc11129c9684014a28ee9d9a"
+```
+
+---
+
+## New transaction
+
+
+```r
+newblock &lt;- list(
+                  index=length(blockchain)+1,
+                  timestamp = Sys.time(),
+previousHash=blockchain[[length(blockchain)]]$thisHash, 
+                  data="Lot 001 was granted to Samuel",
+                  thisHash = NA
+                )
+```
+
+--
+
+```r
+newblock$thisHash &lt;- digest(newblock,algo="sha256")
+```
+
+
+```r
+newblock &lt;- list(newblock)
+
+print(newblock)
+```
+
+```
+## [[1]]
+## [[1]]$index
+## [1] 2
+## 
+## [[1]]$timestamp
+## [1] "2021-03-15 11:48:26 CDT"
+## 
+## [[1]]$previousHash
+## [1] "2de6181eb5a8d6880024ddb725c6f4ca30beb629cc11129c9684014a28ee9d9a"
+## 
+## [[1]]$data
+## [1] "Lot 001 was granted to Samuel"
+## 
+## [[1]]$thisHash
+## [1] "6a715c3ebbde2be4692a1795aee181936c8e177f5e15bfe27bdea740ca665cf0"
+```
+
+--- 
+
+## Append the newblock
+
+
+```r
+blockchain &lt;- c(blockchain,newblock)
+```
+
+
+```r
+print(blockchain)
+```
+
+```
+## [[1]]
+## [[1]]$index
+## [1] 1
+## 
+## [[1]]$timestamp
+## [1] "2021-03-15 10:50:24 CDT"
+## 
+## [[1]]$previousHash
+## [1] 0
+## 
+## [[1]]$data
+## [1] "Genesis block"
+## 
+## [[1]]$thisHash
+## [1] "2de6181eb5a8d6880024ddb725c6f4ca30beb629cc11129c9684014a28ee9d9a"
+## 
+## 
+## [[2]]
+## [[2]]$index
+## [1] 2
+## 
+## [[2]]$timestamp
+## [1] "2021-03-15 11:48:26 CDT"
+## 
+## [[2]]$previousHash
+## [1] "2de6181eb5a8d6880024ddb725c6f4ca30beb629cc11129c9684014a28ee9d9a"
+## 
+## [[2]]$data
+## [1] "Lot 001 was granted to Samuel"
+## 
+## [[2]]$thisHash
+## [1] "6a715c3ebbde2be4692a1795aee181936c8e177f5e15bfe27bdea740ca665cf0"
+```
+
+---
+
+## New transaction
+
+
+```r
+newblock &lt;- list(
+                  index=length(blockchain)+1,
+                  timestamp = Sys.time(),
+previousHash=blockchain[[length(blockchain)]]$thisHash, 
+                  data="Samuel sold the block 01 to Kenedy for $100",
+                  thisHash = NA
+                )
+```
+
+--
+
+```r
+newblock$thisHash &lt;- digest(newblock,algo="sha256")
+```
+
+
+```r
+newblock &lt;- list(newblock)
+
+blockchain &lt;- c(blockchain,newblock)
+```
+
+---
+
+## Hash of the Blockchain
+
+
+```r
+digest(blockchain,algo="sha256")
+```
+
+```
+## [1] "3832b9fbddb56f2ad38fb8ae43f4e6aa2771381bc5a86c1943429d4fa2be983a"
+```
+### Peers in a distributed system can use this hash to confirm the Blockchan has not been tampered with.
+
+
+---
+
+## Immutability
+
+#### Suppose Samuel Jr. wants to claim that the government granted the land to him.
+
+#### He attempts to alter the blockchain
+
+---
+
+## Original Blockchain
+
+
+```r
+bc1 &lt;- NULL
+bc1 &lt;- c(bc1,genesisblock)
+
+newblock &lt;- list(
+                  index=length(blockchain)+1,
+                  timestamp = Sys.time(),
+previousHash=blockchain[[length(blockchain)]]$thisHash, 
+                  data="Lot 001 was granted to Samuel",
+                  thisHash = NA
+                )
+
+newblock &lt;- list(newblock)
+
+bc1 &lt;- c(bc1,newblock)
+
+digest(bc1,algo="sha256")
+```
+
+```
+## [1] "b04253e9cb2c64b8cab0d3ad4f64af78fd765f47051e83f52c54cbb4dc3134f2"
+```
+---
+
+## Ammended Blockchain
+
+
+```r
+bc2 &lt;- NULL
+bc2 &lt;- c(bc2,genesisblock)
+
+newblock &lt;- list(
+                  index=length(blockchain)+1,
+                  timestamp = Sys.time(),
+previousHash=blockchain[[length(blockchain)]]$thisHash, 
+                  data="Lot 001 was granted to Samuel Jr.",
+                  thisHash = NA
+                )
+
+newblock &lt;- list(newblock)
+
+bc2 &lt;- c(bc2,newblock)
+
+digest(bc2,algo="sha256")
+```
+
+```
+## [1] "5e6322537d97a1226ab78373b6938a98a1265cb9f1de7ed52a7cb1ab4f48bb3b"
+```
+#### Peers can confirm this hash is not valid.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
