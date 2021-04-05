@@ -1,0 +1,55 @@
+---
+title: "Lending Club"
+author: "Dimuthu Ratnadiwakara"
+date: "3/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+rm(list=ls())
+library(data.table)
+library(ggplot2)
+library(curl)
+```
+
+
+```{r}
+lc <- fread("https://raw.githubusercontent.com/dratnadiwakara/fin4820/master/lendingclub.csv.gz")
+setorder(lc,year)
+head(lc)
+```
+
+
+# Number of Loans
+```{r}
+
+```
+
+# Loan Amount
+```{r}
+
+```
+
+
+# Loan Purpose
+```{r}
+
+```
+
+
+# FICO Score
+```{r}
+
+```
+
+# FICO Score and Default
+
+```{r}
+
+```
+
