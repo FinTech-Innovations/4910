@@ -4,6 +4,7 @@
     <title>Credit Invisibles and Fintech Lenders</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dimuthu Ratnadiwakara" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
   </head>
@@ -14,11 +15,13 @@ class: center, middle, inverse, title-slide
 # Credit Invisibles and Fintech Lenders
 ### Dimuthu Ratnadiwakara
 ### LSU E. J. Ourso College of Business - Louisiana State University
-### Updated: 2021-01-14
+### Updated: 2021-03-29
 
 ---
 
 class: center, middle
+
+
 
 &lt;style type="text/css"&gt;
 .remark-slide-content {
@@ -30,19 +33,42 @@ class: center, middle
 
 
 
-
 # What is credit?
 
 --
 
 Ability to borrow money or access goods or services with the understanding that the borrower will pay it back &lt;br/&gt;&lt;br/&gt;
 
+???
+payment, credit, and investing.
+payment first few classes
+we talked about blockchain. a technology, primarily for payment. But can be useful in credit, investing, and other areas outside finance.
+Today we start the discussion on credit. We will focus on basics of credit analysis and the problems and limitations of the current system.
+
+goes back to 20,000 to 30,000 years
+
+Q: Who is borrowing?
+
+---
+
+![](debtaspctgdp.gif)
+Source: https://www.mauldineconomics.com
+
+???
+Q US GDP?
+
+debt is about 350%. Last peaked in 1929. Went passed 300 but coming down since the last financial crisis.
+
 ---
 # Credit growth overtime
 
-![Credit growth overtime](fredgraph.png)
----
+![Credit growth overtime](fredgraphdebtcomp.png)
 
+??
+debt in modern economies is a big part of how economies work
+
+here are the slices of the us credit market. each about 1/4th
+---
 # How does credit supply impact the economy?
 
 --
@@ -66,6 +92,13 @@ Housing bubble, lax lending standards from 2000 to 2007. DF act made is difficul
 ---
 class:middle,center
 
+![](debtbalance.png)
+???
+primarily mortgage debt
+student debt didn't use to be like this
+---
+class:middle,center
+
 # General Motors Company 
 ## Balance Sheet
 
@@ -83,6 +116,7 @@ class:middle,center
 - ## Credit analysis attempts to assign measurable numbers to estimate borrowers' ability to repay (&lt;font color="red"&gt;creditworthiness&lt;/font&gt;)
 
 ???
+Q How do you decide whether you should lend to someone?
 Lenders filter out bad borrowers.
 ---
 
@@ -160,7 +194,17 @@ Lenders filter out bad borrowers.
 -Example with figures. 100 applicants for 1000 loan with 5pct PD. 5 default. 95 repay. LGD = 100 and EAD = 1000. EL per applicant is 50. EL for 100 applicants is 50 x 100 = 5000. If the lender can recover this 5000 from the 95 borrowers, then this is an acceptable loan. 
 -Interest rate limits (Usury) don't allow lenders to charge a sufficiently high interest rate. Then no credit.
 ---
+# Pricing Credit Risk
 
+### 100 applicants. Each loan $1,000
+### PD = 5%, LGD = 100%, EAD = 100%
+### Expected Loss = 5% * 100% * 100% * 1000 = 50
+### Expected Loss for 100 applicants = 50 * 100 = 5000
+### Lender should recover this $5,000 from 95 borrowers. (Interest Rate)
+### Interest rate limits (Usury) don't allow lenders to charge a sufficiently high interest rate. Then no credit
+
+
+---
 # 28/36 rule 
 
 &gt; "The term 28/36 rule refers to a common-sense rule used to calculate the amount of debt an individual or household should assume. According to this rule, a household should spend a maximum of 28% of its gross monthly income on total housing expenses and no more than 36% on total debt service, including housing and other debt such as car loans and credit cards. Lenders often use this rule to assess whether to extend credit to borrowers." - Investopedia
@@ -169,11 +213,7 @@ Lenders filter out bad borrowers.
 # FICO score as the standard measure of PD
 
 ![FICO](credit-score-ranges-600x450.png)
----
 
-# High FICO Score -&gt; Less likely to default
-
-![Default](ofico_status.png)
 ---
 
 # The FICO Score
@@ -189,11 +229,22 @@ credit usage, mix of credit used, and credit inquiries
 
 --
 
+- Use data from credit records maintained by the three
+nationwide credit reporting agencies: TransUnion, Equifax, and Experian
+
+--
+
 - A reasonable measure of creditworthiness
 
 --
 
 - Used for other purposes such as employment and immigration
+
+---
+
+# High FICO Score -&gt; Less likely to default
+
+![Default](ofico_status.png)
 
 ---
 
@@ -210,7 +261,23 @@ class:middle,center
 - recent immigrants
 - someone unknowingly made a mistake
 ---
+# Credit Invisibles: by age
 
+![](unscoredbyage.png)
+&lt;font size=3&gt;Source:https://files.consumerfinance.gov/f/201505_cfpb_data-point-credit-invisibles.pdf&lt;/font&gt;
+---
+# Credit Invisibles: by income
+
+![](underscoredbyincome.png)
+&lt;font size=3&gt;Source:https://files.consumerfinance.gov/f/201505_cfpb_data-point-credit-invisibles.pdf&lt;/font&gt;
+
+---
+# Credit Invisibles: by race
+
+![](underscoredbyrace.png)
+&lt;font size=3&gt;Source:https://files.consumerfinance.gov/f/201505_cfpb_data-point-credit-invisibles.pdf&lt;/font&gt;
+
+---
 # Credit invisibles
 
 --
@@ -294,7 +361,20 @@ class: middle, center
 
 ![Alternative data](fintechaltdata.png)
 ---
+# Presentations
 
+- Team 01: Prosper
+
+- Team 02: SoFi
+
+- Team 03: Zopa
+
+- Team 04: Upstart
+
+- Team 05: Ezubao
+
+
+---
 # Readings
 
 - [How Fintech Serves the ‘Invisible Prime’ Borrower](https://knowledge.wharton.upenn.edu/article/fintech-serving-invisible-prime-borrower/)
