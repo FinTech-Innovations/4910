@@ -109,3 +109,13 @@ Use data supplied by investors to create and automatically manage their investme
 
 - Team **05**: Marcus by Goldman Sachs
 
+
+---
+
+# Readings
+
+- [The Emergence of the Robo-advisor](https://repository.upenn.edu/prc_papers/10/)
+
+- [The Pros and Cons of Robo Advisors](https://www.barrons.com/articles/the-pros-and-cons-of-robo-advisors-51547643601)
+
+- [Robo Advisers Keep Adding On Services](https://www.wsj.com/articles/robo-advisers-keep-adding-on-arms-11583331556)

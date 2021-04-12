@@ -13,7 +13,7 @@
   </head>
   <body style="margin:0px;text-align:left;font-size: 14px;font-family: -webkit-pictograph;background-color: white;">
     <div class="wrapper">
-      <header class="no-print" style="background:#d9dcde;color:#000000;height:100vh;padding-top:50px;overflow: auto;">
+      <header class="no-print" style="background:#d9dcde;color:#000000;height:100vh;padding-top:50px;overflow: auto;/* width: 40%; */float: left;">
         <h1 style="text-align:center;"><a href="{{ "/" | absolute_url }}" style="color:#000000;">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         {% if site.logo %}
@@ -81,7 +81,7 @@ Slides <a href="https://fintech-innovations.github.io/4910/Lectures/DR/01-credit
         </div>
       </header>
       
-      <section style="padding-top: 50px;">
+      <section style="padding-top: 50px;width: 70%;float: right;height: 100vh;height: 100%;overflow: auto;">
 
       {{ content }}
 

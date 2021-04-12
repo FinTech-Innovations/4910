@@ -52,17 +52,18 @@ library(tufte)
 
 ## Crowdfunding draws small capital contributions from a large number of individual backers
 
-Used to fund a project with uncertain cash flow
-<br/>
+Used to fund projects with uncertain cash flows
+
 
 --
-A novel way of financing without seeking for venture capital.
+
+* A novel way of financing without seeking for venture capital.
   * Connect projects with funders
   
 --
 <br/>
 
-Three types of crowdfunding
+* Three types of crowdfunding
   * Rewards based
   * Equity based
   * Crypto based
@@ -73,19 +74,14 @@ class: inverse, middle, center
 # Rewards Based Crowdfunding
 ---
  
- # Reward based 
+ # Rewards based 
  
  * Pre-sell products or services
- 
  * Proceed if the minimum funding goal is met
- 
  * Participants are not speculating. Just want the product or the service.
- 
  * No punishment if the development is unsuccessful
- 
  * Successful projects can lead to potential VC attention.
- 
- * e.g: kickstarter, e.g: https://www.kickstarter.com/projects/ryangrepper/coolest-cooler-21st-century-cooler-thats-actually
+ * e.g: kickstarter, https://www.kickstarter.com/projects/ryangrepper/coolest-cooler-21st-century-cooler-thats-actually
 
 
 ---
