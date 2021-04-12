@@ -17,9 +17,10 @@ library(ggplot2)
 library(curl)
 ```
 
-
-```{r}
 lc <- fread("https://raw.githubusercontent.com/dratnadiwakara/fin4820/master/lendingclub.csv.gz")
+```{r}
+lc <- fread(choose.files())
+lc[,year:=as.numeric(substr(issue_d,5,8))]
 setorder(lc,year)
 head(lc)
 ```
@@ -27,29 +28,34 @@ head(lc)
 
 # Number of Loans
 ```{r}
-
+ggplot(lc[,.N,by=year],aes(x=year,y=N))+geom_col()
 ```
 
 # Loan Amount
 ```{r}
-
+ggplot(lc[,.(loanamt=sum(loan_amnt)),by=year],aes(x=year,y=loanamt))+geom_col()
 ```
 
 
 # Loan Purpose
 ```{r}
-
+ggplot(lc[,.(loanamt=sum(loan_amnt)),by=purpose],aes(x=purpose,y=loanamt))+geom_col()+theme(axis.text.x = element_text(angle=90))
 ```
 
 
 # FICO Score
 ```{r}
-
+ggplot(lc,aes(x=fico_range_low))+geom_histogram()
 ```
 
-# FICO Score and Default
+# Grade
+```{r}
+ggplot(lc[,.(loanamt=sum(loan_amnt)),by=grade],aes(x=grade,y=loanamt))+geom_col()
+```
+
+# FICO, Grade =A
 
 ```{r}
-
+ggplot(lc[grade=="A"],aes(x=fico_range_low))+geom_histogram()
 ```
 
