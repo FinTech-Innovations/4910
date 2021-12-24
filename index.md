@@ -15,7 +15,7 @@ layout: default
   - [Raja Velu](https://thecollege.syr.edu/people/affiliated-faculty/velu-raja/) (rpvelu@syr.edu)
 
 #### **Teaching Fellow:** 
-  - Sarp Mertdogan (smertd1@lsu.edu)
+  
 
 
 ## Course Description
